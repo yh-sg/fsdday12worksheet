@@ -1,0 +1,25 @@
+<input type="text" [value]="firstName">
+{{firstName}}
+<br><br>
+<button type="button" disabled="canSubmit">Button</button>
+<br><br>
+<div [style.background-color]="color">
+    Background color^^
+</div>
+<br><br>
+
+<table>
+    <tr *ngFor = "let x of isOdd; let index = index">
+        <td [ngClass]="{'isOdd': 0 === index % 2}">{{x}} {{index % 2 === 0}}</td>
+    </tr>
+</table>
+
+<br><br>
+
+<textarea (mouseover)="mouseOverFn($event)" (mouseout)="isMouseEnter=false">
+
+</textarea>
+
+<br><br>
+
+{{isMouseEnter}} - {{mouseCoordX}} - {{mouseCoordY}}
